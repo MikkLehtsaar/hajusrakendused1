@@ -5,7 +5,7 @@ $file = 'cache.json';
 $fileinfo = filetime($file);
 
 if (!file_exists($file)) {
-    $data = file_get_contents('https://hltv-api.vercel.app/api/matche')
+    $data = file_get_contents('https://hltv-api.vercel.app/api/matches');
     $json = json_decode($data, true);
     file_put_contents('cache.json', json_encode($json));
 }
